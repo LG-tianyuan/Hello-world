@@ -1,0 +1,153 @@
+(THU.CST) os is loading ...
+
+Special kernel symbols:
+  entry  0xc0100036 (phys)
+  etext  0xc0115724 (phys)
+  edata  0xc0152000 (phys)
+  end    0xc0156324 (phys)
+Kernel executable memory footprint: 345KB
+ebp:0xc014ef38 eip:0xc0100bdf args:0xc0100316 0xffff6ad9 0xc014ef68 0xc01000e9
+    kern/debug/kdebug.c:351: print_stackframe+22
+ebp:0xc014ef48 eip:0xc0100ed7 args:0x00000000 0x00000000 0x00000000 0xc010036c
+    kern/debug/kmonitor.c:129: mon_backtrace+10
+ebp:0xc014ef68 eip:0xc01000e9 args:0x00000000 0xc014ef90 0xffff0000 0xc014ef94
+    kern/init/init.c:61: grade_backtrace2+33
+ebp:0xc014ef88 eip:0xc0100112 args:0x00000000 0xffff0000 0xc014efb4 0x0000002a
+    kern/init/init.c:66: grade_backtrace1+38
+ebp:0xc014efa8 eip:0xc0100130 args:0x00000000 0xc0100036 0xffff0000 0x0000001d
+    kern/init/init.c:71: grade_backtrace0+23
+ebp:0xc014efc8 eip:0xc0100155 args:0xc011575c 0xc0115740 0x00004324 0x00000000
+    kern/init/init.c:76: grade_backtrace+34
+ebp:0xc014eff8 eip:0xc010008b args:0xc0115904 0xc011590c 0xc0100e5d 0xc011592b
+    kern/init/init.c:34: kern_init+84
+memory management: default_pmm_manager
+e820map:
+  memory: 0009fc00, [00000000, 0009fbff], type = 1.
+  memory: 00000400, [0009fc00, 0009ffff], type = 2.
+  memory: 00010000, [000f0000, 000fffff], type = 2.
+  memory: 07efe000, [00100000, 07ffdfff], type = 1.
+  memory: 00002000, [07ffe000, 07ffffff], type = 2.
+  memory: 00040000, [fffc0000, ffffffff], type = 2.
+check_alloc_page() succeeded!
+check_pgdir() succeeded!
+check_boot_pgdir() succeeded!
+-------------------- BEGIN --------------------
+PDE(0e0) c0000000-f8000000 38000000 urw
+  |-- PTE(38000) c0000000-f8000000 38000000 -rw
+PDE(001) fac00000-fb000000 00400000 -rw
+  |-- PTE(000e0) faf00000-fafe0000 000e0000 urw
+  |-- PTE(00001) fafeb000-fafec000 00001000 -rw
+--------------------- END ---------------------
+use SLOB allocator
+kmalloc_init() succeeded!
+check_vma_struct() succeeded!
+page fault at 0x00000100: K/W [no page found].
+check_pgfault() succeeded!
+check_vmm() succeeded.
+sched class: stride_scheduler
+ide 0:      10000(sectors), 'QEMU HARDDISK'.
+ide 1:     262144(sectors), 'QEMU HARDDISK'.
+ide 2:     262144(sectors), 'QEMU HARDDISK'.
+SWAP: manager = fifo swap manager
+BEGIN check_swap: count 1, total 31940
+setup Page Table for vaddr 0X1000, so alloc a page
+setup Page Table vaddr 0~4MB OVER!
+set up init env for check_swap begin!
+page fault at 0x00001000: K/W [no page found].
+page fault at 0x00002000: K/W [no page found].
+page fault at 0x00003000: K/W [no page found].
+page fault at 0x00004000: K/W [no page found].
+set up init env for check_swap over!
+write Virt Page c in fifo_check_swap
+write Virt Page a in fifo_check_swap
+write Virt Page d in fifo_check_swap
+write Virt Page b in fifo_check_swap
+write Virt Page e in fifo_check_swap
+page fault at 0x00005000: K/W [no page found].
+swap_out: i 0, store page in vaddr 0x1000 to disk swap entry 2
+write Virt Page b in fifo_check_swap
+write Virt Page a in fifo_check_swap
+page fault at 0x00001000: K/W [no page found].
+do pgfault: ptep c033a004, pte 200
+swap_out: i 0, store page in vaddr 0x2000 to disk swap entry 3
+swap_in: load disk swap entry 2 with swap_page in vadr 0x1000
+write Virt Page b in fifo_check_swap
+page fault at 0x00002000: K/W [no page found].
+do pgfault: ptep c033a008, pte 300
+swap_out: i 0, store page in vaddr 0x3000 to disk swap entry 4
+swap_in: load disk swap entry 3 with swap_page in vadr 0x2000
+write Virt Page c in fifo_check_swap
+page fault at 0x00003000: K/W [no page found].
+do pgfault: ptep c033a00c, pte 400
+swap_out: i 0, store page in vaddr 0x4000 to disk swap entry 5
+swap_in: load disk swap entry 4 with swap_page in vadr 0x3000
+write Virt Page d in fifo_check_swap
+page fault at 0x00004000: K/W [no page found].
+do pgfault: ptep c033a010, pte 500
+swap_out: i 0, store page in vaddr 0x5000 to disk swap entry 6
+swap_in: load disk swap entry 5 with swap_page in vadr 0x4000
+write Virt Page e in fifo_check_swap
+page fault at 0x00005000: K/W [no page found].
+do pgfault: ptep c033a014, pte 600
+swap_out: i 0, store page in vaddr 0x1000 to disk swap entry 2
+swap_in: load disk swap entry 6 with swap_page in vadr 0x5000
+write Virt Page a in fifo_check_swap
+page fault at 0x00001000: K/R [no page found].
+do pgfault: ptep c033a004, pte 200
+swap_out: i 0, store page in vaddr 0x2000 to disk swap entry 3
+swap_in: load disk swap entry 2 with swap_page in vadr 0x1000
+count is 0, total is 5
+check_swap() succeeded!
+sfs: mount: 'simple file system' (274/32494/32768)
+vfs: mount disk0.
+++ setup timer interrupts
+not valid addr c, and  can not find it in vma
+trapframe at 0xc0339e30
+  edi  0x00000000
+  esi  0x00000000
+  ebp  0xc0339eac
+  oesp 0xc0339e50
+  ebx  0xc010dca2
+  edx  0xc0336448
+  ecx  0x00000016
+  eax  0x0000000c
+  ds   0x----0010
+  es   0x----0010
+  fs   0x----0000
+  gs   0x----0000
+  trap 0x0000000e Page Fault
+  err  0x00000000
+  eip  0xc0109ced
+  cs   0x----0008
+  flag 0x00000006 PF,IOPL=0
+kernel panic at kern/trap/trap.c:210:
+    handle pgfault failed in kernel mode. ret=-3
+
+stack trackback:
+ebp:0xc0339d94 eip:0xc0100bdf args:0xc0115a38 0xc0339dd8 0x000000d2 0x9e370001
+    kern/debug/kdebug.c:351: print_stackframe+22
+ebp:0xc0339dc4 eip:0xc0100f48 args:0xc0115bee 0x000000d2 0xc0115e4c 0xfffffffd
+    kern/debug/panic.c:27: __panic+105
+ebp:0xc0339df4 eip:0xc01029c7 args:0xc0339e30 0xc033646c 0xc03453c0 0xc0336390
+    kern/trap/trap.c:210: trap_dispatch+242
+ebp:0xc0339e24 eip:0xc0102ae1 args:0xc0339e30 0x00000000 0x00000000 0xc0339eac
+    kern/trap/trap.c:300: trap+74
+ebp:0xc0339eac eip:0xc0102b36 args:0x0000000c 0x00000100 0xc01550e8 0xc0336310
+    kern/trap/trapentry.S:24: <unknown>+0
+ebp:0xc0339edc eip:0xc0109dcc args:0x0000000c 0xc0339f38 0x00000000 0x00000000
+    kern/sync/sem.c:63: down+24
+ebp:0xc0339efc eip:0xc010b144 args:0x00000000 0x00000006 0xffffffff 0x00000005
+    kern/fs/fs.c:25: lock_files+19
+ebp:0xc0339f1c eip:0xc0110479 args:0xc01183f9 0xc0339f54 0xc0339f38 0x00000000
+    kern/fs/vfs/vfspath.c:31: lock_cfs+24
+ebp:0xc0339f4c eip:0xc01104dd args:0xc0336448 0xc0339f6c 0x00000000 0x00000000
+    kern/fs/vfs/vfspath.c:62: vfs_set_curdir+17
+ebp:0xc0339f7c eip:0xc01105ee args:0xc01183f9 0x0000003a 0x00000000 0x00000000
+    kern/fs/vfs/vfspath.c:95: vfs_chdir+43
+ebp:0xc0339fac eip:0xc010f529 args:0xc01183f9 0x00000000 0x00000000 0x00000000
+    kern/fs/vfs/vfs.c:67: vfs_set_bootfs+77
+ebp:0xc0339fec eip:0xc010dcb4 args:0x00000000 0x00000000 0x00000010 0x00000000
+    kern/process/proc.c:1013: init_main+17
+Welcome to the kernel debug monitor!!
+Type 'help' for a list of commands.
+K> 
