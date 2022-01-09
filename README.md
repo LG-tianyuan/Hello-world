@@ -1,2 +1,2 @@
-# Hello-world
-my first repository
+# os_kernel_lab-ucore
+lab1 - lab8
